@@ -114,8 +114,9 @@ paste("There are",number_of_missing_values,"missing values")
 #Imputation
 df_impute <- df
 for (i in 1:nrow(df)) {
+        df_impute
   if (is.na(df$steps[i])){
-    df_impute$steps[i] <- tapply(df$steps, df$interval, mean, na.rm=T)["df$interval[i]"]
+    df_impute$steps[i] <- average_by_interval$average[average_by_interval$interval==df_impute$interval[i]]
   }
 }
 
@@ -141,7 +142,7 @@ paste("Mean steps after imputation is",mean(df_impute_summary$`sum(steps)`))
 ```
 
 ```
-## [1] "Mean steps after imputation is NA"
+## [1] "Mean steps after imputation is 10766.1886792453"
 ```
 
 ```r
@@ -149,7 +150,7 @@ paste("Median steps after imputation is",median(df_impute_summary$`sum(steps)`))
 ```
 
 ```
-## [1] "Median steps after imputation is NA"
+## [1] "Median steps after imputation is 10766.1886792453"
 ```
 
 # 4. Weekdays and weekends
