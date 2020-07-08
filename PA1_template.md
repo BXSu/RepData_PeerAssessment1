@@ -152,7 +152,7 @@ paste("Median steps after imputation is",median(df_impute_summary$`sum(steps)`))
 ## [1] "Median steps after imputation is NA"
 ```
 
-#4. Weekdays and weekends
+# 4. Weekdays and weekends
 
 ```r
 # Create a new data frame to add date information
@@ -179,19 +179,5 @@ g + geom_line() + facet_grid(.~df4$Weekday)+theme_bw()+labs(title="Average numbe
 ```
 
 ![plot of chunk weekdays](figure/weekdays-1.png)
-
-```r
-knitr::knit("PA1_template.Rmd")
-```
-
-```
-## 
-## 
-## processing file: PA1_template.Rmd
-```
-
-```
-## Error in parse_block(g[-1], g[1], params.src): duplicate label 'setup'
-```
 
 
