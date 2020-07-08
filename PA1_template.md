@@ -96,8 +96,8 @@ paste("The time interval showing the maximum number of steps is",maxinterval,"mi
 ```
 
 
-#3. Imputing missing data
-The data contained missing values. The presence of missing days may introduce bias into some calculations or summaries of the data. Therefore, we wanted to gain insight into how many missing values there are and to impute them for a better analysis. Here the NAs were replaced by the average number of steps of that date.
+# 3. Imputing missing data
+The data contained missing values. The presence of missing days may introduce bias into some calculations or summaries of the data. Therefore, we wanted to gain insight into how many missing values there are and to impute them for a better analysis. Here the NAs were replaced by the average number of steps of the corresponding time interval.
 
 
 ```r
@@ -180,3 +180,4 @@ g + geom_line() + facet_grid(.~df4$Weekday)+theme_bw()+labs(title="Average numbe
 
 ![plot of chunk weekdays](figure/weekdays-1.png)
 
+knitr::knit("PA1_template.Rmd")
