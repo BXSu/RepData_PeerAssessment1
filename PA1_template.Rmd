@@ -81,8 +81,8 @@ df_impute_summary <- summarise(df_impute1,sum(steps))
 hist(df_impute_summary$`sum(steps)`,main="Histogram of total number of steps each day (with imputation)",xlab="Number of steps per day",cex.main=0.8)
 
 # Stats
-paste("Mean steps after imputation is",mean(df_impute_summary$`sum(steps)`,na.rm=TRUE))
-paste("Median steps after imputation is",median(df_impute_summary$`sum(steps)`,na.rm=TRUE))
+paste("Mean steps after imputation is",mean(df_impute_summary$`sum(steps)`))
+paste("Median steps after imputation is",median(df_impute_summary$`sum(steps)`))
 ```
 
 # 4. Weekdays and weekends
