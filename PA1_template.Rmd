@@ -3,8 +3,8 @@ title: "Activity monitoring PA1 template"
 author: "BXS"
 date: "26/06/2020"
 output:
-  pdf_document: default
   html_document: default
+  pdf_document: default
 ---
 
 ## Assignment 1: Activity Monitoring
@@ -36,7 +36,7 @@ hist(df1$sum,main="Histogram of total number of steps each day",xlab="Number of 
 mean <- mean(df1$sum,na.rm=TRUE)
 median <- median(df1$sum,na.rm=TRUE)
 paste("Mean =",mean)
-paste("Median=",median)
+paste("Median =",median)
 ```
 
 # 2. Statistics by interval
@@ -49,7 +49,7 @@ average_by_interval <- summarise(byinterval,mean(steps,na.rm=TRUE))
 names(average_by_interval) <- c("interval","average")
 
 # Create a plot
-with(average_by_interval,plot(interval,average,type="l",xlab="Interval(min)",ylab="Average number of steps",main="Time series of activitity"))
+with(average_by_interval,plot(interval,average,type="l",xlab="Interval (min)",ylab="Average number of steps",main="Time series of activitity"))
 
 # Determine the time interval showing the maximum number of steps
 maxinterval <- average_by_interval$interval[[which.max(average_by_interval$average)]]
@@ -69,7 +69,7 @@ paste("There are",number_of_missing_values,"missing values")
 df_impute <- df
 for (i in 1:nrow(df)) {
   if (is.na(df$steps[i])){
-    df_impute$steps[i] <- tapply(df$steps, df$interval, mean, na.rm=T)
+    df_impute$steps[i] <- tapply(df$steps, df$interval, mean, na.rm=T)["df$interval[i]"]
   }
 }
 
