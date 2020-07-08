@@ -103,8 +103,5 @@ g + geom_line() + facet_grid(.~df4$Weekday)+theme_bw()+labs(title="Average numbe
 
 
 ```
-```{r md file}
-knitr::knit("PA1_template.Rmd")
-```
 
 
